@@ -1,4 +1,4 @@
-#Modal
+#Modal-mobile
 
 ###Introduce
 modal for mobile

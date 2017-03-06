@@ -22,20 +22,7 @@
 				// do something ...				
 			},
 			confirm: function() {
-				new Modal({
-					id: 'modal2',
-					title: '提示',
-					content: '哈哈哈',
-					complete: function() {
-						// do something ...				
-					},
-					confirm: function() {
-						// modal.show();
-					},
-					cancel: function() {
-					
-					}
-				})	
+				
 			},
 			cancel: function() {
 			
