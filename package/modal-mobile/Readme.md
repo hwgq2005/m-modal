@@ -16,7 +16,21 @@ npm install modal-mobile
 
 ###Usage
 ```
-require('modal-mobile') 
+var Model = require('modal-mobile');
+new Modal({
+	id:'modal',
+	title:'提示',
+	content:_html,
+	complete:function(){
+		// do something ...				
+	},
+	confirm:function(){
+		// do something ...
+	},
+	cancel:function(){
+		// do something ...
+	}
+})
 ```
 ###CDN
 
