@@ -82,11 +82,13 @@ gulp.task('compass-dist', function() {
 			image: './src/images'
 		}))
 		.pipe(gulp.dest('./dist/css'))
+		.pipe(gulp.dest('./package/modal-mobile/dist/css'))
 		.pipe(rename({
 			suffix: '.min'
 		}))
 		.pipe(minicss())
 		.pipe(gulp.dest('./dist/css'))
+		.pipe(gulp.dest('./package/modal-mobile/dist/css'))
 });
 
 
@@ -124,11 +126,13 @@ gulp.task('scripts-dist', function() {
 
 	return gulp.src(['./src/js/module/*.js'])
 		.pipe(gulp.dest('./dist/js'))
+		.pipe(gulp.dest('./package/modal-mobile/dist/js'))
 		.pipe(rename({
 			suffix: '.min'
 		}))
 		.pipe(uglify())
 		.pipe(gulp.dest('./dist/js'))
+		.pipe(gulp.dest('./package/modal-mobile/dist/js'))
 
 });
 
