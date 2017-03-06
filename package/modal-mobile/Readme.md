@@ -1,9 +1,7 @@
-Simple, lightweight front-end UI framework
-
-[![Hbook](http://www.bookcss.com/docs/images/banner.jpg)](http://www.bookcss.com)
+Modal for mobile
 
 <p align="left">
-<a href="https://www.npmjs.com/package/hbook-ui"><img src="https://img.shields.io/npm/dt/hbook-ui.svg" alt="Downloads"> </a><a href="https://www.npmjs.com/package/hbook-ui"><img src="https://img.shields.io/npm/v/hbook-ui.svg" alt="Version"></a> <a href="https://www.npmjs.com/package/hbook-ui"><img src="https://img.shields.io/npm/l/hbook-ui.svg" alt="License"></a>
+<a href="https://www.npmjs.com/package/modal-mobile"><img src="https://img.shields.io/npm/dt/modal-mobile.svg" alt="Downloads"> </a><a href="https://www.npmjs.com/package/modal-mobile"><img src="https://img.shields.io/npm/v/modal-mobile.svg" alt="Version"></a> <a href="https://www.npmjs.com/package/modal-mobile"><img src="https://img.shields.io/npm/l/modal-mobile.svg" alt="License"></a>
 </p>
 
 Get Start : http://www.bookcss.com
@@ -13,17 +11,17 @@ Hbook focus on the front-end development and promotion, adhere to share, open th
 
 ###Install
 ```
-npm install hbook-ui  
+npm install modal-mobile  
 ```
 
 ###Usage
 ```
-require('hbook-ui') 
+require('modal-mobile') 
 ```
 ###CDN
 
-- https://unpkg.com/hbook-ui/dist/css/hbook.min.css
-- https://unpkg.com/hbook-ui/dist/js/hbook.min.js
+- https://unpkg.com/modal-mobile/dist/css/hbook.min.css
+- https://unpkg.com/modal-mobile/dist/js/hbook.min.js
 
 ###Contact
 

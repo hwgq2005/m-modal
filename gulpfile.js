@@ -40,6 +40,12 @@ gulp.task('clean', function() {
 		.pipe(clean());
 });
 
+// 文档说明
+gulp.task('readme', function() {
+	return gulp.src(['./Readme.md'])
+			.pipe(gulp.dest('./package/modal-mobile/'));
+});
+
 // 复制文件
 gulp.task('copy', function() {
 	return gulp.src(['./src/js/lib/**/*.js'])
@@ -142,7 +148,7 @@ gulp.task('imagemin', function() {
 // 正式构建
 gulp.task('build', function(done) {
 
-	runSequence('copy', 'compass-docs', 'compass-dist', 'scripts-docs', 'scripts-dist', 'imagemin');
+	runSequence('copy', 'readme', 'compass-docs', 'compass-dist', 'scripts-docs', 'scripts-dist', 'imagemin');
 	// 监听文件变化
 	gulp.watch([
 		'./src/**/*.html',
@@ -152,7 +158,7 @@ gulp.task('build', function(done) {
 		'./src/js/**/*.js'
 	], function() {
 		// livereload.listen();
-		runSequence('copy','compass-docs','compass-dist','scripts-docs','scripts-dist','imagemin');
+		runSequence('copy','readme','compass-docs','compass-dist','scripts-docs','scripts-dist','imagemin');
 	});
 })
 
