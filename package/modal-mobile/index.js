@@ -1,3 +1,1 @@
-module.exports = {
-	modal : require('./dist/js/modal.min.js')
-};
+module.exports = require('./dist/js/modal.min.js');
