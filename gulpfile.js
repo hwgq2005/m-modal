@@ -155,7 +155,8 @@ gulp.task('build', function(done) {
 		'./src/sass/**/*.scss',
 		'./src/images/**',
 		'./src/css/**/*.css',
-		'./src/js/**/*.js'
+		'./src/js/**/*.js',
+		'./Readme.md'
 	], function() {
 		// livereload.listen();
 		runSequence('copy','readme','compass-docs','compass-dist','scripts-docs','scripts-dist','imagemin');
