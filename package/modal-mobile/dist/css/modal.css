@@ -23,10 +23,10 @@ html {
     display: block; }
   .modal .modal-header {
     position: relative;
-    padding: 16px;
+    padding: 16px 18px 10px;
     text-align: center;
     color: #333;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 700; }
   .modal .modal-close {
     display: none;
@@ -87,9 +87,8 @@ html {
         box-flex: 1;
         padding: 12px 20px;
         font-size: 1.6rem;
-        font-weight: 600;
         line-height: 20px;
-        color: #699FE1;
+        color: #007aff;
         white-space: nowrap;
         -webkit-tap-highlight-color: transparent; }
         .modal .modal-footer .btn-group .modal-btn:first-child:after {
