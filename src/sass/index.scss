@@ -83,10 +83,13 @@ code {
 	
 }
 .index {
-	padding: 50px 20px;
+	padding: 0 20px;
 }
-.index .hb-sum {
-	margin-bottom: 30px;
+.index .module{
+	margin: 40px 0 ;
+}
+.index .module-tit {
+	margin-bottom:30px;
 	font-size:2rem;
 	text-align:center;
 }
@@ -133,21 +136,12 @@ code {
     text-overflow: ellipsis;
 }
 .docs-example {
-	position: relative;
+	text-align:center;
 	padding:20px;
-	margin: 15px 0;
-	background-color: #fff;
-	border: 1px solid #ddd;
+	background-color: #f7f7f7;
 }
-.docs-example-mt {
-	padding-top: 30px;
-}
-.docs-example-scrollbar .progress {
-	margin-bottom: 10px;
-}
-.docs-input input[type=text] {
-	display: block;
-	margin-bottom: 10px;
+.docs-example .btn {
+	margin:5px;
 }
 
 .footer.container{
@@ -163,14 +157,6 @@ code {
 	font-size: 1.4rem;
 }
 
-.box-type{
-	margin-left:-3px;
-	margin-bottom:10px;
-}
-.box-type a{
-	width:20px;
-	height:20px;
-}
 
 /*====== Scroll ========*/
 .scroll-top{
