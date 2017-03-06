@@ -97,12 +97,12 @@
 
 		// 弹框确认按钮				
 		if (options.confirmButton) {
-			_html += '<a href="javascript:;" class="btn btn-primary modal-confirm-' + options.id + '" >'+options.confirmText+'</a>';
+			_html += '<a href="javascript:;" class="modal-btn modal-confirm-' + options.id + '" >'+options.confirmText+'</a>';
 		}
 
 		// 弹框取消按钮
 		if (options.cancelButton && options.type != 1) {
-			_html += '<a href="javascript:;" class="btn modal-cancel-' + options.id + '">'+options.ccancelText+'</a>';
+			_html += '<a href="javascript:;" class="modal-btn modal-cancel-' + options.id + '">'+options.ccancelText+'</a>';
 		}
 		_html += '</div></div>';
 		

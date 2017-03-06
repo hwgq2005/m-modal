@@ -5,6 +5,7 @@
 
 html{
   font-size:62.5%;
+
 }
 .modal-open{
 	overflow-y:hidden;
@@ -13,13 +14,14 @@ html{
 .modal{
 	display: none;
 	position: fixed;
-  top:25%;
+  top:30%;
   left:10%;
   right:10%;
   text-align:left;
-  border-radius: 4px;
+  border-radius: 12px;
   color: #666;
   background-color: #fff;
+  font-family: 'Helvetica Neue',Helvetica,sans-serif;
  	@include box-shadow(0 5px 10px rgba(0, 0, 0, .2));
   &.in{
     display:block;
@@ -27,7 +29,6 @@ html{
   .modal-header {
       position:relative;
       padding:16px;
-      background-color:#fff;
       text-align: center;
       color: #333;
       font-size: 1.6rem;
@@ -51,7 +52,7 @@ html{
       position:relative;
       text-align: center;
       max-height: 150px;
-      padding: 10px 20px 15px;
+      padding: 0 20px 15px;
       color:#999;
       line-height: 22px;
       font-size: 1.6rem;
@@ -60,9 +61,21 @@ html{
       word-break: break-all;
   }
   .modal-footer {
-      padding:15px ;
-      border-top:1px solid #f8f6f2;
+      position:relative;
       font-size: 0;
+      &:after{
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 1px;
+        content: '';
+        z-index: 15;
+        background-color: rgba(0,0,0,.2);
+        @include transform(scaleY(.5));
+      }
       &.modal-footer-left{
         text-align:left;
       }
@@ -74,33 +87,35 @@ html{
       }
       .btn-group{
         display: -webkit-box;
-        .btn{
+        .modal-btn{
+          position:relative;
           display: block;
           text-align: center;
           -webkit-box-flex:1;
           -moz-box-flex:1;
           -o-box-flex:1;
           box-flex:1;
-          margin: 0 5px;
-          padding: 10px 20px;
-          font-size: 1.8rem;
+          padding: 12px 20px;
+          font-size: 1.6rem;
           line-height: 20px;
-          background: #E4E4E4;
-          color: #666;
+          color: $primaryBg;
           white-space: nowrap;
-          border-radius: 2px;
           -webkit-tap-highlight-color: transparent;
-          &[class*="modal-confirm-"]{
-            background: $primaryBg;
-            color: #fff;
-            &:hover{
-               background:darken($primaryBg, 5%);
-            }
-          }
-          &[class*="modal-cancel-"]{
-             &:hover{
-               background-color: #CFCFCF;
-             }
+            
+          &:first-child:after{
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: auto;
+            left: auto;
+            width: 1px;
+            height: 100%;
+            content: '';
+            z-index: 15;
+            background-color: rgba(0,0,0,.2);
+            @include transform(scaleX(.5));
+            
           }
         }
       }
@@ -114,7 +129,7 @@ html{
     left:0;
     right: 0;
     width:100%;
-    background: rgba(0,0,0,.6);
+    background: rgba(0,0,0,.4);
     text-align: center;
     opacity: 0;
     @include transition(opacity .15s linear);
