@@ -1,0 +1,160 @@
+
+/*====== modal ========*/
+
+@import "../config";
+
+html{
+  font-size:62.5%;
+}
+.modal-open{
+	overflow-y:hidden;
+}
+
+.modal{
+	display: none;
+	position: fixed;
+	top:25%;
+  width:400px;
+  left:50%;
+  margin-left:-200px;
+  text-align:left;
+  color: #666;
+  background-color: #fff;
+ 	@include box-shadow(0 5px 10px rgba(0, 0, 0, .2));
+  &.in{
+    display:block;
+  }
+  .modal-header {
+      position:relative;
+      padding:15px;
+      border-bottom:1px solid #f8f6f2;
+      background-color:#fff;
+      text-align: center;
+      color: #333;
+      font-size: 1.6rem;
+
+  }
+  .modal-close{
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      padding: 5px;
+      color: #999;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1;
+      &:hover{
+        color:#666;
+      }
+  }
+  .modal-body {
+      position:relative;
+      max-height: 200px;
+      padding:20px;
+      color:#666;
+      line-height: 22px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      word-break: break-all;
+  }
+  &.modal-tip .modal-body{
+    text-align: center;
+  }
+  .modal-footer {
+      padding:15px ;
+      border-top:1px solid #f8f6f2;
+      font-size: 0;
+      &.modal-footer-left{
+        text-align:left;
+      }
+      &.modal-footer-right{
+        text-align:right;
+      }
+      &.modal-footer-center{
+        text-align:center;
+      }
+      .btn-group{
+        .btn{
+          display: inline-block;
+          margin: 0 5px;
+          padding: 6px 20px;
+          font-size: 1.4rem;
+          line-height: 20px;
+          background: #E4E4E4;
+          color: #666;
+          white-space: nowrap;
+          border-radius: 2px;
+          -webkit-tap-highlight-color: transparent;
+          &[class*="modal-confirm-"]{
+            background: $primaryBg;
+            color: #fff;
+            &:hover{
+               background:darken($primaryBg, 5%);
+            }
+          }
+          &[class*="modal-cancel-"]{
+             &:hover{
+               background-color: #CFCFCF;
+             }
+          }
+        }
+      }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .modal{
+    width: auto!important;
+    left:10%;
+    right:10%;
+    margin-left:0!important;
+    .modal-header{
+      display: none;
+    }
+    .modal-body{
+      padding:36px 20px;
+      max-height: 150px;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+    &.modal-tip{
+      .btn-group{
+        [class*="modal-cancel-"]{
+          display: none;
+        }
+      }
+    }
+    .modal-footer{
+      .btn-group{
+        display: -webkit-box;
+        .btn{
+          display: block;
+          text-align: center;
+          padding: 10px 20px;
+          font-size: 1.8rem;
+          -webkit-box-flex:1;
+          -moz-box-flex:1;
+          -o-box-flex:1;
+          box-flex:1;
+        }
+      }
+    }
+    
+  }
+}
+
+.modal-backdrop{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    width:100%;
+    background: rgba(0,0,0,.6);
+    text-align: center;
+    opacity: 0;
+    @include transition(opacity .15s linear);
+    &.in{
+      opacity: 1;
+    }
+}

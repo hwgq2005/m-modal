@@ -1,0 +1,138 @@
+/*====== Button ========*/
+@import "config";
+
+button[type="button"] {
+	border: none;
+}
+.label {
+	display: inline-block;
+    padding: 6px 20px;
+	font-size: 1.4rem;
+	line-height: 20px;
+	background: $defaultBg;
+	color: #666;
+	white-space: nowrap;
+	border-radius:2px;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.btn {
+	@extend .label;
+	&:hover {
+		background-color: #CFCFCF;
+	}
+}
+
+.btn-mini,
+.label-mini{
+	padding: 3px 8px;
+	font-size: 1.2rem;
+}
+
+.btn-large,
+.label-large{
+	padding: 10px 20px;
+	font-size: 16px;
+}
+.btn-block{
+	display:block;
+	text-align:center;
+}
+.btn-group{
+	.btn{
+		margin:0 5px;
+	}
+}
+
+// button type1
+.btn-primary{
+	@include button-define($primaryBg,#fff,'btn');
+}
+.btn-success{
+	@include button-define($successBg,#fff,'btn');
+}
+.btn-warning{
+	@include button-define($warningBg,#fff,'btn');
+}
+
+.btn-danger{
+	@include button-define($dangerBg,#fff,'btn');
+}
+.btn-violet{
+	@include button-define($violetBg,#fff,'btn');
+}
+
+.btn-grey{
+	@include button-define($greyBg,#fff,'btn');
+}
+
+// button type2
+.btn-primary-border {
+  @include button-border-define($primaryBg,'primary');
+}
+.btn-success-border {
+  @include button-border-define($successBg,'success');
+}
+.btn-warning-border {
+  @include button-border-define($warningBg,'warning');
+}
+.btn-danger-border {
+  @include button-border-define($dangerBg,'danger');
+}
+.btn-violet-border {
+  @include button-border-define($violetBg,'violet');
+}
+.btn-grey-border{
+  @include button-border-define($greyBg,'grey');
+}
+
+// label
+.label-primary{
+	@include button-define($primaryBg,#fff,'label');
+}
+.label-success{
+	@include button-define($successBg,#fff,'label');
+}
+.label-warning{
+	@include button-define($warningBg,#fff,'label');
+}
+.label-danger{
+	@include button-define($dangerBg,#fff,'label');
+}
+.label-violet{
+	@include button-define($violetBg,#fff,'label');
+}
+
+.label-grey{
+	@include button-define($greyBg,#fff,'label');
+}
+
+// border-radius
+.btn-radius-2 {
+	@include border-radius(2px);
+}
+.btn-radius-4 {
+	@include border-radius(4px);
+}
+.btn-radius-16 {
+	@include border-radius(16px);
+}
+.btn-radius-50 {
+	@include border-radius(50%);
+}
+
+@media screen and (max-width: 600px){
+	.label,.btn{
+		padding: 10px 20px;
+	    font-size: 1.8rem;
+	}
+	.btn-mini,
+	.label-mini{
+		padding: 6px 16px;
+		font-size: 1.4rem;
+	}
+	.btn-large,
+	.label-large{
+		padding: 14px 20px;
+		font-size: 1.8rem;
+	}
+}
