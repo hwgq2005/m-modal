@@ -20,7 +20,7 @@ var Model = require('modal-mobile');
 new Modal({
 	id:'modal',
 	title:'提示',
-	content:_html,
+	content:'确认执行此操作?',
 	complete:function(){
 		// do something ...				
 	},
