@@ -9,10 +9,10 @@ html {
   display: none;
   position: fixed;
   top: 25%;
-  width: 400px;
-  left: 50%;
-  margin-left: -200px;
+  left: 10%;
+  right: 10%;
   text-align: left;
+  border-radius: 4px;
   color: #666;
   background-color: #fff;
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -22,13 +22,14 @@ html {
     display: block; }
   .modal .modal-header {
     position: relative;
-    padding: 15px;
-    border-bottom: 1px solid #f8f6f2;
+    padding: 16px;
     background-color: #fff;
     text-align: center;
     color: #333;
-    font-size: 1.6rem; }
+    font-size: 1.6rem;
+    font-weight: 700; }
   .modal .modal-close {
+    display: none;
     position: absolute;
     top: 8px;
     right: 10px;
@@ -41,15 +42,15 @@ html {
       color: #666; }
   .modal .modal-body {
     position: relative;
-    max-height: 200px;
-    padding: 20px;
-    color: #666;
+    text-align: center;
+    max-height: 150px;
+    padding: 10px 20px 15px;
+    color: #999;
     line-height: 22px;
+    font-size: 1.6rem;
     overflow-y: auto;
     overflow-x: hidden;
     word-break: break-all; }
-  .modal.modal-tip .modal-body {
-    text-align: center; }
   .modal .modal-footer {
     padding: 15px;
     border-top: 1px solid #f8f6f2;
@@ -60,51 +61,32 @@ html {
       text-align: right; }
     .modal .modal-footer.modal-footer-center {
       text-align: center; }
-    .modal .modal-footer .btn-group .btn {
-      display: inline-block;
-      margin: 0 5px;
-      padding: 6px 20px;
-      font-size: 1.4rem;
-      line-height: 20px;
-      background: #E4E4E4;
-      color: #666;
-      white-space: nowrap;
-      border-radius: 2px;
-      -webkit-tap-highlight-color: transparent; }
-      .modal .modal-footer .btn-group .btn[class*="modal-confirm-"] {
-        background: #699FE1;
-        color: #fff; }
-        .modal .modal-footer .btn-group .btn[class*="modal-confirm-"]:hover {
-          background: #5491dd; }
-      .modal .modal-footer .btn-group .btn[class*="modal-cancel-"]:hover {
-        background-color: #CFCFCF; }
-
-@media screen and (max-width: 600px) {
-  .modal {
-    width: auto !important;
-    left: 10%;
-    right: 10%;
-    margin-left: 0 !important; }
-    .modal .modal-header {
-      display: none; }
-    .modal .modal-body {
-      padding: 36px 20px;
-      max-height: 150px;
-      text-align: center;
-      font-size: 1.8rem; }
-    .modal.modal-tip .btn-group [class*="modal-cancel-"] {
-      display: none; }
     .modal .modal-footer .btn-group {
       display: -webkit-box; }
       .modal .modal-footer .btn-group .btn {
         display: block;
         text-align: center;
-        padding: 10px 20px;
-        font-size: 1.8rem;
         -webkit-box-flex: 1;
         -moz-box-flex: 1;
         -o-box-flex: 1;
-        box-flex: 1; } }
+        box-flex: 1;
+        margin: 0 5px;
+        padding: 10px 20px;
+        font-size: 1.8rem;
+        line-height: 20px;
+        background: #E4E4E4;
+        color: #666;
+        white-space: nowrap;
+        border-radius: 2px;
+        -webkit-tap-highlight-color: transparent; }
+        .modal .modal-footer .btn-group .btn[class*="modal-confirm-"] {
+          background: #699FE1;
+          color: #fff; }
+          .modal .modal-footer .btn-group .btn[class*="modal-confirm-"]:hover {
+            background: #5491dd; }
+        .modal .modal-footer .btn-group .btn[class*="modal-cancel-"]:hover {
+          background-color: #CFCFCF; }
+
 .modal-backdrop {
   position: fixed;
   top: 0;

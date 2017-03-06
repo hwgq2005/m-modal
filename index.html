@@ -14,6 +14,8 @@
 	<link rel="stylesheet" href="docs/css/hbook-button.css">
 	<link rel="stylesheet" href="docs/css/hbook-table.css">
 	<link rel="stylesheet" href="docs/css/index.css">
+	<link rel="stylesheet" href="dist/css/modal.min.css">
+
  </head>
  <body >
 
@@ -48,8 +50,9 @@
 		<div class="module">
 			<h1 class="module-tit">Demo</h1>
 			<div class="docs-example">
-				<a href="jacascript:;" class="btn btn-primary btn-large" id="modal1">打开提示框</a>
-				<a href="jacascript:;" class="btn btn-primary btn-large" id="modal2">打开确认框</a>
+				<a href="jacascript:;" class="btn btn-primary btn-large" id="modal-one">打开确认框</a>
+				<a href="jacascript:;" class="btn btn-primary btn-large" id="modal-two">打开提示框</a>
+
 			</div>
 			
 		</div>
@@ -84,11 +87,11 @@ var modal = new Modal({
 		            <tbody>
 		              <tr>
 		                <td><code>id</code></td>
-		                <td>string，例如："hbook-dialog"</td>
+		                <td>string，例如："modal"</td>
 		              </tr>
 		              <tr>
 		                <td><code>type</code></td>
-		                <td>number，0：有头部和尾部，1：没有头部，2:没有尾部，3：没有头尾</td>
+		                <td>number，0：确认框，1：提示框</td>
 		              </tr>
 		              <tr>
 		                <td><code>addClass</code></td>
@@ -97,10 +100,6 @@ var modal = new Modal({
 		              <tr>
 		                <td><code>title</code></td>
 		                <td>string，标题</td>
-		              </tr>
-		              <tr>
-		                <td><code>width</code></td>
-		                <td>nubmer，例如：width=500</td>
 		              </tr>
 		              <tr>
 		                <td><code>backdrop</code></td>
@@ -152,9 +151,8 @@ var modal = new Modal({
 	<!-- footer end -->
 
     <script src="docs/js/lib/prettify.js"></script>
-    <script>
-    	prettyPrint();
-    </script>
+    <script src="dist/js/modal.min.js"></script>
+    <script src="docs/js/main.min.js"></script>
  </body>
 
 </html>

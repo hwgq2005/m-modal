@@ -13,11 +13,11 @@ html{
 .modal{
 	display: none;
 	position: fixed;
-	top:25%;
-  width:400px;
-  left:50%;
-  margin-left:-200px;
+  top:25%;
+  left:10%;
+  right:10%;
   text-align:left;
+  border-radius: 4px;
   color: #666;
   background-color: #fff;
  	@include box-shadow(0 5px 10px rgba(0, 0, 0, .2));
@@ -26,15 +26,15 @@ html{
   }
   .modal-header {
       position:relative;
-      padding:15px;
-      border-bottom:1px solid #f8f6f2;
+      padding:16px;
       background-color:#fff;
       text-align: center;
       color: #333;
       font-size: 1.6rem;
-
+      font-weight: 700;
   }
   .modal-close{
+      display: none;
       position: absolute;
       top: 8px;
       right: 10px;
@@ -49,16 +49,15 @@ html{
   }
   .modal-body {
       position:relative;
-      max-height: 200px;
-      padding:20px;
-      color:#666;
+      text-align: center;
+      max-height: 150px;
+      padding: 10px 20px 15px;
+      color:#999;
       line-height: 22px;
+      font-size: 1.6rem;
       overflow-y: auto;
       overflow-x: hidden;
       word-break: break-all;
-  }
-  &.modal-tip .modal-body{
-    text-align: center;
   }
   .modal-footer {
       padding:15px ;
@@ -74,11 +73,17 @@ html{
         text-align:center;
       }
       .btn-group{
+        display: -webkit-box;
         .btn{
-          display: inline-block;
+          display: block;
+          text-align: center;
+          -webkit-box-flex:1;
+          -moz-box-flex:1;
+          -o-box-flex:1;
+          box-flex:1;
           margin: 0 5px;
-          padding: 6px 20px;
-          font-size: 1.4rem;
+          padding: 10px 20px;
+          font-size: 1.8rem;
           line-height: 20px;
           background: #E4E4E4;
           color: #666;
@@ -99,47 +104,6 @@ html{
           }
         }
       }
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .modal{
-    width: auto!important;
-    left:10%;
-    right:10%;
-    margin-left:0!important;
-    .modal-header{
-      display: none;
-    }
-    .modal-body{
-      padding:36px 20px;
-      max-height: 150px;
-      text-align: center;
-      font-size: 1.8rem;
-    }
-    &.modal-tip{
-      .btn-group{
-        [class*="modal-cancel-"]{
-          display: none;
-        }
-      }
-    }
-    .modal-footer{
-      .btn-group{
-        display: -webkit-box;
-        .btn{
-          display: block;
-          text-align: center;
-          padding: 10px 20px;
-          font-size: 1.8rem;
-          -webkit-box-flex:1;
-          -moz-box-flex:1;
-          -o-box-flex:1;
-          box-flex:1;
-        }
-      }
-    }
-    
   }
 }
 
