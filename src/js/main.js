@@ -10,10 +10,10 @@
 
 	var modalBtnOne = document.querySelector('#modal-one'),
 		modalBtnTwo = document.querySelector('#modal-two');
-
+		
 	modalBtnOne.onclick = function() {
 
-		var modal = new Modal({
+		Modal({
 			id: 'modal',
 			title: '提示',
 			content: '确认执行此操作？',
@@ -32,7 +32,7 @@
 
 	modalBtnTwo.onclick = function() {
 
-		new Modal({
+		Modal({
 			id: 'modal1',
 			type: 1,
 			title: '提示',

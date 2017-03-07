@@ -1,7 +1,7 @@
 /**
  * @authors H君
  * @date    2017-03-07 09:50:11
- * @version 0.0.3
+ * @version 0.0.4
  */
 
 (function (global, factory) {
@@ -12,11 +12,10 @@
  
 }(this, function () { 
 
-
 	"use strict";
 
 	// 版本号
-	var Version = '0.0.3';
+	var Version = '0.0.4';
 
 	// 弹框层级
 	var modalIndex = 1050;
@@ -257,6 +256,8 @@
 		}
 	}
 
-	return  Modal;
+	return function(option){
+		new Modal(option);
+	};
 
 }));
