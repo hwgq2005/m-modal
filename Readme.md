@@ -17,7 +17,7 @@ npm install m-modal
 ###Usage
 ```
 var Model = require('m-modal');
-new Modal({
+Modal({
 	id:'modal',
 	title:'提示',
 	content:'确认执行此操作?',
