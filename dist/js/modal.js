@@ -1,7 +1,7 @@
 /**
  * @authors H君
  * @date    2017-03-07 09:50:11
- * @version 0.0.1
+ * @version 0.0.3
  */
 
 (function (global, factory) {
@@ -16,7 +16,7 @@
 	"use strict";
 
 	// 版本号
-	var Version = '0.0.1';
+	var Version = '0.0.3';
 
 	// 弹框层级
 	var modalIndex = 1050;
@@ -26,7 +26,7 @@
 		// 默认配置
 		var defaults = {
 			id: 'modal' + new Date().getTime(),
-			type: 0, // 0:有头部和尾部 1:没有头部 2:没有尾部 3：没有头尾 
+			type: 0, // 0:确认框 1:提示框 
 			addClass: '', // 添加样式类名
 			title: '提示',	// 标题
 			backdrop: true, // 是否出现遮罩
@@ -69,11 +69,6 @@
 		var _self = this,
 			typeClass = null,
 			options = _self.options;
-			
-
-
-		// 提示类型
-		options.type == 1 ? typeClass = 'modal-prompt' : typeClass = '';
 
 		typeof options.addClass == 'string' ? options.addClass = options.addClass : options.addClass = '';
 
@@ -82,7 +77,7 @@
 			modalHtml = document.createElement("div");
 
 		modalHtml.id = options.id;
-		modalHtml.className = 'modal ' + options.addClass + typeClass;
+		modalHtml.className = 'modal ' + options.addClass;
 		modalHtml.style.zIndex =  modalIndex - 1;
 
 		// 弹框头部
