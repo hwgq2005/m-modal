@@ -1,7 +1,7 @@
 /**
  * @authors H君
- * @date    2017-02-09 14:26:44
- * @version 0.1.6
+ * @date    2017-03-07 09:50:11
+ * @version 0.0.5
  */
 
 (function (global, factory) {
@@ -16,7 +16,7 @@
 	"use strict";
 
 	// 版本号
-	var Version = '0.1.6';
+	var Version = '0.0.5';
 
 	// 弹框层级
 	var modalIndex = 1050;
@@ -109,8 +109,7 @@
 
 		modalHtml.innerHTML = _html;
 
-		var body = document.querySelector('body');
-		body.appendChild(modalHtml);
+		document.body.appendChild(modalHtml);
 		addClass(modalHtml, 'in');
 
 		if (typeof _self.complete == 'function') {
@@ -129,10 +128,9 @@
 	Modal.prototype.hide = function(id) {
 
 		var elememtId = id || this.options.id,
-			body = document.querySelector('body'),
 			modalElement = document.querySelector('#' + elememtId);
 
-		body.removeChild(modalElement);
+		document.body.removeChild(modalElement);
 
 		document.querySelectorAll('.modal-backdrop-' + elememtId).length > 0 ? this.hideBackDrop(elememtId) : '';
 
@@ -141,8 +139,7 @@
 	// 显示遮罩
 	Modal.prototype.backdrop = function(options) {
 
-		var elememtId = options.id,
-			body = document.querySelector('body');
+		var elememtId = options.id;
 
 		if (document.querySelectorAll('.modal-backdrop-' + elememtId).length <= 0) {
 
@@ -152,8 +149,8 @@
 			modalBackdrop.style.zIndex = modalIndex - 2 ;
 			
 			// 追加到body底部
-			body.appendChild(modalBackdrop);
-			addClass(body, 'modal-open');
+			document.body.appendChild(modalBackdrop);
+			addClass(document.body, 'modal-open');
 			addClass(modalBackdrop, 'in');
 
 		}
@@ -164,12 +161,11 @@
 	Modal.prototype.hideBackDrop = function(elememtId) {
 
 		var _self = this,
-			body = document.querySelector('body'),
 			backdropElement = document.querySelector('.modal-backdrop-' + elememtId);
 
-		body.removeChild(backdropElement);
+		document.body.removeChild(backdropElement);
 		if (document.querySelectorAll('.modal-backdrop').length < 1) {
-			removeClass(body, 'modal-open');
+			removeClass(document.body, 'modal-open');
 		}
 
 	}
@@ -212,6 +208,10 @@
 		if (backdropElement.length > 0) {
 			backdropElement[0].onclick = function() {
 				_self.hide(elememtId);
+			}
+
+			backdropElement[0].ontouchmove = function(e) {
+				e.preventDefault(); //阻止默认事件
 			}
 		}
 
