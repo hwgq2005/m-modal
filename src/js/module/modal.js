@@ -110,7 +110,10 @@
 		modalHtml.innerHTML = _html;
 
 		document.body.appendChild(modalHtml);
-		addClass(modalHtml, 'in');
+
+		setTimeout(function(){
+			addClass(modalHtml, 'in');
+		},0);
 
 		if (typeof _self.complete == 'function') {
 			_self.complete();
@@ -151,7 +154,11 @@
 			// 追加到body底部
 			document.body.appendChild(modalBackdrop);
 			addClass(document.body, 'modal-open');
-			addClass(modalBackdrop, 'in');
+
+			setTimeout(function(){
+				addClass(modalBackdrop, 'in');
+			},0)
+			
 
 		}
 
