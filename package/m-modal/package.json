@@ -1,12 +1,12 @@
 {
-  "name": "modal-mobile",
-  "version": "0.0.6",
+  "name": "m-modal",
+  "version": "0.0.1",
   "main": "index.js",
   "author": "hwgq2005",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hwgq2005/modal-mobile.git"
+    "url": "git+https://github.com/hwgq2005/m-modal.git"
   },
   "keywords": [
     "bookcss",
@@ -17,9 +17,9 @@
   ],
   "description": "Modal for mobile",
   "bugs": {
-    "url": "https://github.com/hwgq2005/modal-mobile/issues"
+    "url": "https://github.com/hwgq2005/m-modal/issues"
   },
-  "homepage": "https://github.com/hwgq2005/modal-mobile#readme",
+  "homepage": "https://github.com/hwgq2005/m-modal#readme",
 
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

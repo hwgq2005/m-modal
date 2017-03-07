@@ -43,7 +43,7 @@ gulp.task('clean', function() {
 // 文档说明
 gulp.task('readme', function() {
 	return gulp.src(['./Readme.md'])
-			.pipe(gulp.dest('./package/modal-mobile/'));
+			.pipe(gulp.dest('./package/m-modal/'));
 });
 
 // 复制文件
@@ -82,13 +82,13 @@ gulp.task('compass-dist', function() {
 			image: './src/images'
 		}))
 		.pipe(gulp.dest('./dist/css'))
-		.pipe(gulp.dest('./package/modal-mobile/dist/css'))
+		.pipe(gulp.dest('./package/m-modal/dist/css'))
 		.pipe(rename({
 			suffix: '.min'
 		}))
 		.pipe(minicss())
 		.pipe(gulp.dest('./dist/css'))
-		.pipe(gulp.dest('./package/modal-mobile/dist/css'))
+		.pipe(gulp.dest('./package/m-modal/dist/css'))
 });
 
 
@@ -126,13 +126,13 @@ gulp.task('scripts-dist', function() {
 
 	return gulp.src(['./src/js/module/*.js'])
 		.pipe(gulp.dest('./dist/js'))
-		.pipe(gulp.dest('./package/modal-mobile/dist/js'))
+		.pipe(gulp.dest('./package/m-modal/dist/js'))
 		.pipe(rename({
 			suffix: '.min'
 		}))
 		.pipe(uglify())
 		.pipe(gulp.dest('./dist/js'))
-		.pipe(gulp.dest('./package/modal-mobile/dist/js'))
+		.pipe(gulp.dest('./package/m-modal/dist/js'))
 
 });
 
