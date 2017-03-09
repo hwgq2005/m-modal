@@ -114,7 +114,7 @@ html {
           height: 100%;
           content: '';
           z-index: 15;
-          background-color: rgba(0, 0, 0, 0.2);
+          background-color: rgba(0, 0, 0, 0.1);
           -moz-transform: scaleX(0.5);
           -ms-transform: scaleX(0.5);
           -webkit-transform: scaleX(0.5);
