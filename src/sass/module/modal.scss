@@ -77,7 +77,7 @@ html{
         height: 1px;
         content: '';
         z-index: 15;
-        background-color: rgba(0,0,0,.2);
+        background-color: rgba(0,0,0,.1);
         @include transform(scaleY(.5));
       }
       &.modal-footer-left{
