@@ -6,15 +6,15 @@ Get Start : https://hwgq2005.github.io/m-modal
 <a href="https://www.npmjs.com/package/m-modal"><img src="https://img.shields.io/npm/dt/m-modal.svg" alt="Downloads"> </a><a href="https://www.npmjs.com/package/m-modal"><img src="https://img.shields.io/npm/v/m-modal.svg" alt="Version"></a> <a href="https://www.npmjs.com/package/m-modal"><img src="https://img.shields.io/npm/l/m-modal.svg" alt="License"></a>
 </p>
 
-###Introduce
+### Introduce
 Modal for mobile
 
-###Install
+### Install
 ```
 npm install m-modal  
 ```
 
-###Usage
+### Usage
 ```
 var Model = require('m-modal');
 Modal({
@@ -32,15 +32,15 @@ Modal({
 	}
 })
 ```
-###CDN
+### CDN
 
 - https://unpkg.com/m-modal/dist/css/modal.min.css
 - https://unpkg.com/m-modal/dist/js/modal.min.js
 
-###Contact
+### Contact
 
 - Weibo：[@hwgq2005](http://www.weibo.com/hwgq2005) 
 - Email：hbook@bookcss.com
 
-###License
+### License
 MIT
