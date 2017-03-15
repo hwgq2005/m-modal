@@ -10,12 +10,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<title>Modal for mobile</title>
 	<link rel="Shortcut Icon" href="docs/images/hbook.ico">
-	<link rel="stylesheet" href="docs/css/common.css">
-	<link rel="stylesheet" href="docs/css/hbook-button.css">
-	<link rel="stylesheet" href="docs/css/hbook-table.css">
-	<link rel="stylesheet" href="docs/css/index.css">
+	<link rel="stylesheet" href="docs/css/hbook-template.css">
 	<link rel="stylesheet" href="dist/css/modal.min.css">
-
  </head>
  <body >
 
@@ -23,21 +19,21 @@
 		<img src="docs/images/hbook.jpg" alt="简洁、直观的前端UI框架－Hbook">
 	</div>
 	
-	<!-- banner begin -->
-	<div class="banner"  id="h-index">
-		<h2 class="title">Modal</h2>
-		<p>移动端弹框</p>
+	<!-- template-header begin -->
+	<div class="template-header" >
+		<h2 class="template-header-tit">Modal</h2>
+		<p class="template-header-sum">移动端弹框</p>
 		<div class="btn-group">
 			<a href="https://github.com/hwgq2005/modal-mobile" class="btn btn-large btn-primary download">Modal (v0.0.6)</a>
 			<a href="#start" class="btn btn-large btn-primary download">开始使用</a>
 		</div>
 	</div>
-	<!-- banner end -->
+	<!-- template-header end -->
 
-	<!-- content begin -->
-	<div class="index w-768" id="start">
-		<div class="module">
-			<h1 class="module-tit">Get Start</h1>
+	<!-- template-content begin -->
+	<div class="template-content w-768" id="start">
+		<div class="template-module">
+			<h1 class="template-module-tit">Get Start</h1>
 <pre class="prettyprint linenums">
  &lt;!--  核心 CSS 文件  -->
  &lt;link rel="stylesheet" href="https://unpkg.com/m-modal/dist/css/modal.min.css">
@@ -47,18 +43,16 @@
 </pre>
 		</div>
 
-		<div class="module">
-			<h1 class="module-tit">Demo</h1>
+		<div class="template-module">
+			<h1 class="template-module-tit">Demo</h1>
 			<div class="docs-example">
 				<a href="javascript:;" class="btn btn-primary btn-large" id="modal-one">打开确认框</a>
 				<a href="javascript:;" class="btn btn-primary btn-large" id="modal-two">打开提示框</a>
-
 			</div>
-			
 		</div>
 
-		<div class="module">
-			<h1 class="module-tit">Usage</h1>
+		<div class="template-module">
+			<h1 class="template-module-tit">Usage</h1>
 <pre class="prettyprint linenums">
 调用方式：
 var modal = Modal({
@@ -75,7 +69,6 @@ var modal = Modal({
 		// do something ...
 	}
 })
-
 </pre>
 			<div class="margin-20">
 				<table class="table table-bordered table-zebra">
@@ -140,16 +133,16 @@ var modal = Modal({
 		</div>
 	</div>	
 
-	<!-- content end -->
+	<!-- template-content end -->
 
-	<!-- footer begin -->
-	<footer class="footer w-768">
-		<div class="footer-content">
+	<!-- template-template-footer begin -->
+	<template-footer class="template-footer w-768">
+		<div class="template-footer-content">
 			<p>© Hbook 2016-2017 All right reserved By <a href="http://www.weibo.com/hwgq2005" target="_blank" title="微博">@hwgq2005</a> </p>
 			<p>Email：<a href="mailto:hbook@bookcss.com" title="邮箱">hbook@bookcss.com</a></p>
 		</div>
-	</footer>
-	<!-- footer end -->
+	</template-footer>
+	<!-- template-template-footer end -->
 
     <script src="docs/js/lib/prettify.js"></script>
     <script src="dist/js/modal.min.js"></script>
