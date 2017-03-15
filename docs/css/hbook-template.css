@@ -346,6 +346,11 @@ button[type="button"] {
           margin: 0 10px;
           color: #E4E4E4; }
 
+*, :after, :before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 body {
   font-family: "Ping Fang SC", "STHeiTi", "arial", "Microsoft YaHei", "SimSun", "Georgia", "Times", "Times New Roman", "serif";
   font-size: 1.4rem; }

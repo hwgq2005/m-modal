@@ -4,6 +4,11 @@
 @import "./hbook-button";
 @import "./hbook-table";
 
+*, :after, :before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 body {
 	font-family: "Ping Fang SC", "STHeiTi", "arial", "Microsoft YaHei", "SimSun", "Georgia", "Times", "Times New Roman", "serif";
 	font-size: 1.4rem;
@@ -51,6 +56,7 @@ code {
 	padding: 80px 40px 100px;
 	color: #699FE1;
 	background: lighten(#699FE1, 26%);
+
 	.template-header-tit {
 		font-size: 8rem;
 		margin-bottom: 10px;
@@ -72,6 +78,7 @@ code {
 }
 .template-content {
 	padding: 0 20px;
+
 	.template-module {
 		margin: 40px 0;
 	}
@@ -84,6 +91,7 @@ code {
 .docs-example {
 	padding: 20px;
 	background-color: #f7f7f7;
+
 	.btn {
 		margin: 5px;
 	}
