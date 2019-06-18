@@ -180,10 +180,12 @@
 
 		// 点击确认按钮
 		var confirmElement = document.querySelectorAll('.modal-confirm-' + elememtId);
-		confirmElement[0].onclick = function() {
-			if (typeof _self.confirm == 'function') {
-				_self.confirm();
-				_self.hide(elememtId);
+		if (confirmElement.length > 0) {
+			confirmElement[0].onclick = function() {
+				if (typeof _self.confirm == 'function') {
+					_self.confirm();
+					_self.hide(elememtId);
+				}
 			}
 		}
 
